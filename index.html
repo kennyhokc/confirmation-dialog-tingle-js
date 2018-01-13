@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Modal</title>
+    <link rel="stylesheet" href="tingle.css">
+</head>
+<body>
+<a href="#" id="modal1">Show modal 1</a>
+<br>
+<a href="#" id="modal2">Show modal 2</a>
+
+</body>
+<script src="tingle.js"></script>
+<script src="index.js"></script>
+
+<script>
+    let confirm1 = new rp.dialogs.modalConfirmation();
+    confirm1.setContent('<a href="#" id="showModal1">Show modal 1</a>');    
+
+    let confirm2 = new rp.dialogs.modalConfirmation();
+    confirm2.setContent('<a href="#" id="showModal1">Show modal 2</a>');    
+    
+    document.getElementById('modal1').addEventListener('click', function(e) {
+        //alert('1');
+        // open modal
+        confirm1.open();
+    });
+
+    document.getElementById('modal2').addEventListener('click', function(e) {
+        //alert('2');        
+        // open modal
+        confirm2.open();
+    });
+    
+</script>
+</html>
